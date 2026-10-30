@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="ja">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>わたしのタスク</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<main>
+  <header><span class="eyebrow">MY TASKS</span><h1>わたしのタスク</h1><p>ひとつずつ、今日できることから。</p></header>
+  <section class="card" aria-label="タスク管理">
+    <form id="add-form"><label for="task-input">新しいタスク</label><div class="input-row"><input id="task-input" maxlength="200" placeholder="何をしますか？" required autocomplete="off"><button class="primary" type="submit">追加する</button></div></form>
+    <div class="toolbar"><div class="filters" role="group" aria-label="表示するタスク"><button data-filter="all" aria-pressed="true">すべて</button><button data-filter="active" aria-pressed="false">未完了</button><button data-filter="done" aria-pressed="false">完了</button></div><span id="count"></span></div>
+    <ul id="tasks" aria-label="タスク一覧"></ul><p id="empty">まだタスクはありません。<br>小さなことから追加してみましょう。</p>
+    <p id="status" role="status" aria-live="polite"></p>
+  </section>
+  <footer>タスクはこのブラウザに保存されます。<br>別の端末との同期はありません。</footer>
+</main><script type="module" src="app.js"></script>
+</body></html>
